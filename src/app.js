@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
+
 var httpserver = app.listen(8080);
+console.log('Express listening on 8080')
+
 var io = require('socket.io')(httpserver);
 
 app.get('/', function (req, res) {
@@ -13,3 +16,6 @@ io.on('connection', function (socket) {
     console.log(data);
   });
 });
+
+
+console.log('Express startup complete')
