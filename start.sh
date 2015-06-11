@@ -9,4 +9,4 @@ cd socketiotest/src
 
 npm install
 
-nodejs .
+nodejs app.js
