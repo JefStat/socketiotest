@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var httpserver = app.listen(80);
+var httpserver = app.listen(8080);
 var io = require('socket.io')(httpserver);
 
 app.get('/', function (req, res) {
