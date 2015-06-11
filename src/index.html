@@ -1,8 +1,26 @@
-<script src="/socket.io/socket.io.js"></script>
-<script>
-  var socket = io.connect('http://localhost');
-  socket.on('news', function (data) {
-    console.log(data);
-    socket.emit('my other event', { my: 'data' });
-  });
-</script>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Socket io client</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <input id="someInput" value="localhost:8080" />
+    <script>
+    var socket = undefined;
+    $('#someInput').keyup(function(e) {
+        if (e.keyCode === 13 && socket === undefined) {
+            var socket = io.connect('http://' + $(this).val());
+            socket.on('news', function(data) {
+                console.log(data);
+                socket.emit('my other event', {
+                    my: 'data'
+                });
+            });
+        }
+    });
+    </script>
+</body>
