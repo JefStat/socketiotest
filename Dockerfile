@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+EXPOSE 8080
+
 # make sure apt is up to date
 RUN apt-get update
 
