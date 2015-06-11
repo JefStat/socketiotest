@@ -1,0 +1,17 @@
+{
+    "dependencies": {
+        "express": "^4.12.4",
+        "socket.io": "^1.3.5"
+    },
+    "name": "Socket.io-Test",
+    "version": "v0.0.1",
+    "description": "Testing routing socket io through nginx proxies",
+    "main": "app.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JefStat/socketiotest"
+    },
+    "scripts": {
+        "start": "node app.js"
+    }
+}
