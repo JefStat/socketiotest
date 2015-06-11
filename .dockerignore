@@ -1,0 +1,6 @@
+Dockerfile
+*.log
+README
+src/
+.git
+node_modules
