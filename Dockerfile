@@ -1,15 +1,8 @@
-FROM UBUNTU:latest
+FROM node:0.10-onbuild
 
-sudo apt-get update
-sudo apt-get install nodejs
+ADD start.sh /tmp/
 
-# Bundle app source
-COPY . /src
+RUN chmod +x /tmp/start.sh
 
-# Install app dependencies
-RUN cd /src; npm install
-
-EXPOSE 80
-
-CMD ["npm", "start"]
+CMD ./tmp/start.sh
 
